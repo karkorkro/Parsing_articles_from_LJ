@@ -13,7 +13,7 @@ for link in soup_blog_page.find_all('a', class_='subj-link'):
     links.append(link.get('href'))
 
 # варим суп уже отдельно из страницы с полной статьей
-for link in links[1:3]:
+for link in links[49:51]:
     new_url = link
     new_response = requests.get(new_url)
     soup_article_page = BeautifulSoup(new_response.text, 'html.parser')
