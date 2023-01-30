@@ -48,7 +48,6 @@ def check_tag(tag):
 
 
 def tag_random(tag):
-
     if not check_tag():
         return "Некорректный тег, попробуйте посмотреть список тегов с помощью команды /showtags"
     else:

@@ -1,10 +1,8 @@
 import telebot
 import requests
-import pprint
-import time
-from ljparsing import find_random_evo_article, check_tags
+from ljparsing import find_random_evo_article, show_tags
 
-
+# токен придется поменять после получения оценки
 TOKEN = '5963285639:AAEahwhPPYukAtLuGYOP2nvw2yw-JBfFFIw'
 bot = telebot.TeleBot(TOKEN)
 MAIN_URL = f'https://api.telegram.org/bot{TOKEN}'
@@ -33,7 +31,7 @@ def pull_random_article(message):
 
 @bot.message_handler(commands=['showtags'])
 def show_tags(message):
-    bot.reply_to(message, check_tags())
+    bot.reply_to(message, show_tags())
 
 
 @bot.message_handler(content_types=['text'])
